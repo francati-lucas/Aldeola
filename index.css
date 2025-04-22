@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --color-primary: #283F1C;    /* Verde escuro - PANTONE 2411 C */
+  --color-secondary: #888C60;  /* Verde oliva - PANTONE 5773 C */
+  --color-tertiary: #6A7147;   /* Verde intermediário (entre os dois PANTONE) */
+  --color-tertiary-light: #A5A98B; /* Verde oliva claro */
+  --color-accent: #A8AD78;     /* Verde oliva mais claro e vibrante */
+  --color-light: #F5F5F0;      /* Fundo claro */
+  --color-dark: #1A2A13;       /* Verde mais escuro que o PANTONE 2411 C */
+  --color-text: #333;
+  --color-text-light: #777;
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove blue highlight on mobile touch */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Disable pull-to-refresh effect */
+html {
+  height: 100%;
+  overflow: auto;
+}

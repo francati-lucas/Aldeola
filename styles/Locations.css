@@ -1,0 +1,229 @@
+.locations {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.locations .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-tertiary);
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+.separator {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-tertiary));
+  margin: 0 auto;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.location-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.location-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.location-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 20px;
+}
+
+.location-overlay h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.location-info {
+  padding: 20px;
+}
+
+.location-address, .location-contact, .location-menu, .location-navigation, .location-hours {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.location-navigation {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.location-hours {
+  align-items: flex-start;
+}
+
+.location-hours i {
+  margin-top: 3px;
+  color: var(--color-tertiary);
+}
+
+.location-hours p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.nav-label {
+  margin: 0 0 8px 0;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.navigation-options {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link i {
+  margin-right: 6px;
+  color: #fff;
+}
+
+.nav-link.google-maps {
+  background-color: #4285F4;
+}
+
+.nav-link.google-maps:hover {
+  background-color: #3367D6;
+}
+
+.nav-link.waze {
+  background-color: #33CCFF;
+}
+
+.nav-link.waze:hover {
+  background-color: #00BBEE;
+}
+
+.location-address i, .location-contact i, .location-menu i, .location-hours i {
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-right: 10px;
+  width: 30px;
+  text-align: center;
+}
+
+.location-address p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.whatsapp-link:hover {
+  color: #25D366;
+}
+
+.whatsapp-link i {
+  color: #25D366;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.menu-link:hover {
+  color: var(--color-accent);
+}
+
+.menu-link i {
+  color: var(--color-accent);
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations {
+    padding: 70px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .location-image {
+    height: 180px;
+  }
+} 

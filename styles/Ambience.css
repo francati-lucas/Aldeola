@@ -1,0 +1,204 @@
+.ambience {
+  padding: 80px 0;
+  background-color: #F5F5F5; /* PANTONE 11-0601 Bright White */
+}
+
+.ambience .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ambience .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.ambience .section-header h2 {
+  color: #5B7F47; /* PANTONE 5767 C - Verde oliva */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ambience .separator {
+  width: 80px;
+  height: 3px;
+  background-color: #888C60; /* PANTONE 5835 C - Verde musgo */
+  margin: 0 auto 20px;
+}
+
+.ambience .section-subtitle {
+  color: #6D6E71; /* PANTONE Cool Gray 9 C */
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Galeria de imagens */
+.ambience-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 60px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  height: 400px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  background-color: #888C60; /* PANTONE 5835 C */
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-item:nth-child(1) .gallery-image {
+  background-image: url('../assets/quem-somos.jpg');
+}
+
+.gallery-item:nth-child(2) .gallery-image {
+  background-image: url('../assets/unidade-fornecedora.jpg');
+}
+
+.gallery-item:nth-child(3) .gallery-image {
+  background-image: url('../assets/unidade-jagua.jpg');
+}
+
+.gallery-item:nth-child(4) .gallery-image {
+  background-image: url('../assets/quemsomos-empresa.jpg');
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(91, 127, 71, 0.85), transparent); /* PANTONE 5767 C com transparência */
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.gallery-overlay p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Features do ambiente */
+.ambience-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.feature-item {
+  position: relative;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.feature-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+
+.feature-icon {
+  margin-bottom: 20px;
+}
+
+.feature-icon i {
+  font-size: 2.5rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-item:hover .feature-icon i {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-item h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .ambience-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item.large {
+    grid-column: span 1;
+    height: 300px;
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+  
+  .ambience-features {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+} 
